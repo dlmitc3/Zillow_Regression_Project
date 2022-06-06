@@ -2,8 +2,9 @@
 
 **PROJECT DESCRIPTION**
 
-the Zillow Data Science team was asked to predict the values of single unit properties.
-GOALS
+The Zillow Data Science team was asked to predict the values of single unit properties.
+
+**GOALS**
 
 Predict the values of single unit properties using property data from the Zillow database on the Codeup SQL. The focus will be the properties with a transaction during the "hot months" of May-August, 2017.
 
