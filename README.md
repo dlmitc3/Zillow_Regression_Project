@@ -9,7 +9,7 @@ Predict the values of single unit properties using property data from the Zillow
 
 Plot the distribution of tax rates for each county. (his is separate from the creation of model )
 
-Create a presentation of findings. See presentation
+
 
 **DATA DICTIONARY**
 
