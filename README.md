@@ -15,13 +15,12 @@
 **DATA DICTIONARY**
 
 Feature	        Definition	                                Data Type
-parcelid	    Unique parcel identifier	                object
-n_bedrooms	    Number of bedrooms	                        float64
-n_bathrooms	    Number of bathrooms (includes half baths)	float64
-sq_ft	        Property structure square footage	        float64
-county	        County associated with property	            int64
-taxamount	    Taxes for property	                        float64
-tax_rate	    Calculation of (taxamount/ home_value)	    float64
+tax_value	    Unique parcel identifier	                float64
+bedrooms	    Number of bedrooms	                        float64
+bathrooms	    Number of bathrooms (includes half baths)	float64
+sqft	        Property structure square footage	        float64
+age             Age of the structure (from yearbuilt todate)float64
+fips	        County associated with property	            float64
 
 
 Target	            Definition	            Data Type
