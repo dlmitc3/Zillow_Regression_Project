@@ -54,11 +54,19 @@ I used Zillow.csv data
 
 - Clean and prepare data for preparation step. Split dataset into train, validate, test. Separate target from features and scale the selected features. Create a function to automate the process. The function is saved in a prepare.py module.
 
-## Explore
+## Exacute66
+
+This fuctions is a combination of my explore, evaluate and model
+
+### Explore
 
 - Visualize all combinations of variables.Define two hypotheses, set an alpha, run the statistical tests needed, document findings and takeaways.
 
-## Model
+### Evaluate
+
+- This function takes in a set of independent variable values, the corresponding set of dependent variable values, and a set of predictions for the dependent variable. it then displays a plot of residuals for the given values. 
+
+### Model
 
 - Extablishing and evaluating a baseline model.
 - Document various algorithms and/or hyperparameters you tried along with the evaluation code and results.
