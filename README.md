@@ -1,15 +1,17 @@
-# **Zillow Regression Project**
+
+![1](https://user-images.githubusercontent.com/102172479/172487815-8c9955eb-f3da-44c0-b29a-5401d9424e2a.jpeg)
+
+# **Predicting Home Value using Zillow data**
+
 
 
 **PROJECT DESCRIPTION**
 
-- The Zillow Data Science team was asked to predict the values of single unit properties.
+- The Zillow Data Science team was asked to predict the values of single unit properties. By analyze property attributes in relation to their 2017 assessed tax value, I have develop a model for predicting that value based on those attributes, and leave with recommendations for how to improve future predictions. Since Zillow's estimate of home value is one of the primary drivers of website traffic, having a reliable estimate is paramount. Any improvement I can make on the previous model will help us better position ourselfs in the real estate technology marketplace, keeping us as the number one name in real estate technology.
 
 **GOALS**
 
-- Predict the values of single unit properties using property data from the Zillow database on the Codeup SQL. The focus will be the properties with a transaction during the "hot months" of May-August, 2017.
-
-- Plot the distribution of tax rates for each county. (his is separate from the creation of model )
+- My goal is to create a reliable model for predicting property values. Using in depth data analysis of Zillows property data from 2017. I will use exploratory analysis techniques to identify the key drivers of the assessed tax value for those properties, then use machine learning algorithms to create a model capable of predicting tax values based on features of the property.
 
 
 
