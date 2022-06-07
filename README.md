@@ -20,18 +20,20 @@
 | bedrooms   | Number of bedrooms                                  | float64    |
 | bathrooms  | Number of bathrooms (includes half baths)           | float64    |
 | sqft       | Property structure square footage                   | float64    |
-| age        | Age of the structure (from yearbuilt todate)float64 | float64    |
+| age        | Age of the structure (from yearbuilt todate) | float64    |
 | fips       | County associated with property                     | float64    |
 
 
-Target	            Definition	            Data Type
-assessed_value_usd	Value of the property	float64
+| Target               | Definition            | Data Type |
+| -------------------- | --------------------- | --------- |
+| Assessed\_Value\_usd | Value of the property | float64   |
 
 
-County	Description
-6037	Los Angeles County
-6059	Orange County
-6111	Ventura County
+| County | Description        |
+| ------ | ------------------ |
+| 6037   | Los Angeles County |
+| 6059   | Orange County      |
+| 6111   | Ventura County     |
 
 
 # PROJECT PLANNIG
