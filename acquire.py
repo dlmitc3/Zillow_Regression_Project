@@ -1,55 +1,50 @@
-import pandas as pd
-import numpy as np
 import os
-from env import host, username, password
-import warnings
-warnings.filterwarnings("ignore")
+import pandas as pd
+import env
 
-
-# ****************************  connection **********************************************
-
-# Create helper function to get the necessary connection url.
-def get_connection(db_name):
+def zillow_2017_data():
     '''
-    This function uses my info from my env file to
-    create a connection url to access the Codeup db.
+    This function uses a SQL query to access the Codeup MySQL database and join 
+    together all the relevant data using the following tables:
+      - properties_2017
+      - propertylandusetype
+      - predictions_2017
+    The data obtained includes all properties in the dataset which had a transaction in 2017.
+    The function caches a csv in the local directory for later use. 
     '''
-    from env import host, username, password
-    return f'mysql+pymysql://{username}:{password}@{host}/{db_name}'
-
-
-# **************************** Zillow ******************************************************
-
- 
-#acquire data for the first time
-def get_new_zillow():
-    '''
-    This function reads in the zillow data from the Codeup db
-    and returns a pandas DataFrame with columns :
-     bedroomcnt, bathroomcnt, calculatedfinishedsquarefeet, taxvaluedollarcnt, yearbuilt, taxamount, fips 
-    '''
-    sql_query = '''
-    SELECT bedroomcnt, bathroomcnt, calculatedfinishedsquarefeet, taxvaluedollarcnt, yearbuilt, taxamount, fips
-    FROM properties_2017
-    WHERE propertylandusetypeid = 261
-    '''
-    return pd.read_sql(sql_query, get_connection('zillow'))
-
-#acquire data main function 
-def get_zillow():
-    '''
-    This function reads in zillow data from Codeup database, writes data to
-    a csv file if a local file does not exist, and returns a df.
-    '''
-    if os.path.isfile('zillow.csv'):
-        
-        # If csv file exists, read in data from csv file.
-        df = pd.read_csv('zillow.csv', index_col=0)
-        
-    else:
-        
-        # Read fresh data from db into a DataFrame.
-        df = get_new_zillow()
-        
-        # Write DataFrame to a csv file.
-        df.to_csv('zillow.csv')
+    # establish a filename for the local csv
+    filename = 'zillow.csv'
+    # check to see if a local copy already exists. 
+    if os.path.exists(filename):
+        print('Reading from local CSV...')
+        # if so, return the local csv
+        return pd.read_csv(filename)
+    # otherwise, pull the data from the database:
+    # establish database url
+    url = env.get_db_url('zillow')
+    # establish query
+    sql = '''
+            SELECT bedroomcnt, 
+                    bathroomcnt, 
+                    calculatedfinishedsquarefeet, 
+                    taxvaluedollarcnt, 
+                    yearbuilt, 
+                    fips,
+                    garagetotalsqft,
+                    poolcnt, 
+                    lotsizesquarefeet 
+              FROM properties_2017
+                JOIN propertylandusetype USING (propertylandusetypeid)
+                JOIN predictions_2017 USING(parcelid)
+              WHERE propertylandusedesc IN ("Single Family Residential", 
+                                            "Inferred Single Family Residential")
+                AND transactiondate LIKE "2017%%";
+            '''
+    print('No local file exists\nReading from SQL database...')
+    # query the database and return the resulting table as a pandas dataframe
+    df = pd.read_sql(sql, url)
+    # save the dataframe to the local directory as a csv
+    print('Saving to local CSV... ')
+    df.to_csv(filename, index=False)
+    # return the resulting dataframe
+    return df
