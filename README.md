@@ -1,4 +1,5 @@
 # **Zillow Regression Project**
+![alt text(https://github.com/dlmitc3/Zillow_Regression_Project/edit/main/1.jpeg?raw=true)
 
 **PROJECT DESCRIPTION**
 
