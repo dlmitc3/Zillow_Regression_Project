@@ -29,11 +29,17 @@
 | Assessed\_Value\_usd | Value of the property | float64   |
 
 
-| County | Description        |
-| ------ | ------------------ |
-| 6037   | Los Angeles County |
-| 6059   | Orange County      |
-| 6111   | Ventura County     |
+| FIPS codes | Description        |
+| ---------- | ------------------ |
+| 6037       | Los Angeles County |
+| 6059       | Orange County      |
+| 6111       | Ventura County     |
+
+What are FIPS codes?
+
+Answer
+
+Federal Information Processing Standards (FIPS), now known as Federal Information Processing Series, are numeric codes assigned by the National Institute of Standards and Technology (NIST). Typically, FIPS codes deal with US states and counties. US states are identified by a 2-digit number, while US counties are identified by a 3-digit number. For example, a FIPS code of 06071, represents California -06 and San Bernardino County -071.
 
 
 # PROJECT PLANNIG
