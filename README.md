@@ -87,8 +87,10 @@ This fuctions is a combination of my explore, evaluate and model
 
 # INITIAL IDEAS/ HYPOTHESES STATED
 
-- 𝐻𝑜 : There is no difference in the average of assessed_value_usd for the properties with 3 bedrooms vs 2 bedrooms
-- 𝐻𝑎 : There is significant difference in the average of assessed_value_usd for the properties with 3 bedrooms vs 2 bedrooms
+**Testing correlation between number of bedrooms and tax value:**
+
+- 𝐻𝑜 : There is no difference in the average assessed value of properties with 2 or 3 bedrooms 
+- 𝐻𝑎 : There is significant difference in the average of assessed value for the properties with 2 or 3 bedrooms 
 
 # Key Findings:
 
