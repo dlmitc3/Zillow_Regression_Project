@@ -13,7 +13,17 @@
 
 - My goal is to create a reliable model for predicting property values. Using in depth data analysis of Zillows property data from 2017. I will use exploratory analysis techniques to identify the key drivers of the assessed tax value for those properties, then use machine learning algorithms to create a model capable of predicting tax values based on features of the property.
 
+**Questions to think about:**
 
+- Is there a significant correlation between the number of bathrooms in a home and it's value?
+
+- Is there a significant correlation between the number of bedrooms in a home and it's value?
+
+- Is there a significant correlation between the square footage of a home and it's value?
+
+- Which has a greater effect on home values, number of bedrooms, number of bathrooms, or square footage?
+
+- A three bedrooms and two bathrooms home is often considered ideal for many buyers. Could this be a useful categorical feature?
 
 **DATA DICTIONARY**
 
@@ -78,7 +88,7 @@ This fuctions is a combination of my explore, evaluate and model
 
 # AUDIENCE
 
-- The Zillow data science team
+- Managers and Excutive of Zillow.
 
 # INITIAL IDEAS/ HYPOTHESES STATED
 
@@ -89,8 +99,8 @@ This fuctions is a combination of my explore, evaluate and model
 
  - Read this README.md
  - Create a env.py file that has (user, host, password) in order to get the database
- - Download the aquire.py, prepare.py, explore.py , model.py, evaluate.pyand and zillow_mvp.ipynb into your working directory
- - Run the zillow_mvp.ipynb notebook
+ - Download the aquire.py, prepare.py, execute66.py and Final_Report.ipynb into your working directory
+ - Run the Final_Report.ipynb notebook
 
 # DELIVER:
 
