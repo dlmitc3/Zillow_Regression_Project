@@ -87,10 +87,10 @@ This fuctions is a combination of my explore, evaluate and model
 
 # INITIAL IDEAS/ HYPOTHESES STATED
 
-**Testing correlation between number of bedrooms and tax value:**
+**Testing correlation between number of bathroom and tax value:**
 
-- 𝐻𝑜 : There is no difference in the average assessed value of properties with 2 or 3 bedrooms 
-- 𝐻𝑎 : There is significant difference in the average of assessed value for the properties with 2 or 3 bedrooms 
+- 𝐻𝑜 : There is no linear correlation between the number of bathrooms and tax value.
+- 𝐻𝑎 : There is a linear correlation between the number of bathrooms and tax value.
 
 # Key Findings:
 
