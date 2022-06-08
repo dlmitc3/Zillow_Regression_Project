@@ -23,23 +23,18 @@
 
 - Which has a greater effect on home values, number of bedrooms, number of bathrooms, or square footage?
 
-- A three bedrooms and two bathrooms home is often considered ideal for many buyers. Could this be a useful categorical feature?
+- What size home is concidered ideal size for a single family? 
 
 **DATA DICTIONARY**
 
-| Feature    | Definition                                          | Data\_Type |
-| ---------- | --------------------------------------------------- | ---------- |
-| tax\_value | Unique parcel identifier                            | float64    |
-| bedrooms   | Number of bedrooms                                  | float64    |
-| bathrooms  | Number of bathrooms (includes half baths)           | float64    |
-| sqft       | Property structure square footage                   | float64    |
-| age        | Age of the structure (from yearbuilt todate)        | float64    |
-| fips       | County associated with property                     | float64    |
-
-
-| Target               | Definition            | Data Type |
-| -------------------- | --------------------- | --------- |
-| Assessed\_Value\_usd | Value of the property | float64   |
+| Feature    | Definition                                          | Data\_Type |   Values   |   
+| ---------- | --------------------------------------------------- | ---------- | ---------- |
+| tax\_value | Unique parcel identifier                            | float64    | 1000 - 1,038,537 |          
+| bedrooms   | Number of bedrooms                                  | float64    |     2 - 5       |   
+| bathrooms  | Number of bathrooms (includes half baths)           | float64    |     1 - 4       |
+| sqft       | Property structure square footage                   | float64    |    152 - 3,566   |     
+| age        | Age of the structure (from yearbuilt todate)        | float64    |      1 - 137    |
+| fips       | County associated with property                     | float64    |    '06059', '06037', '06111'        |   
 
 
 | FIPS codes | Description        |
@@ -94,6 +89,27 @@ This fuctions is a combination of my explore, evaluate and model
 
 - 𝐻𝑜 : There is no difference in the average of assessed_value_usd for the properties with 3 bedrooms vs 2 bedrooms
 - 𝐻𝑎 : There is significant difference in the average of assessed_value_usd for the properties with 3 bedrooms vs 2 bedrooms
+
+# Key Findings:
+
+We determined that the following factors are significant drivers of home value:
+
+number of bedrooms
+number of bathrooms
+square footage (finished area)
+Recommendations:
+
+Zillow should continue to collect data regarding the number of bedrooms and bathrooms in a home, as well as the home's area in square feet. This data has been conclusively shown to assist in predicting home values. If using this analysis to decide which homes are worth investing in, an investor should lean towards homes with higher values in these categories, all other considerations being equal.
+
+# Next Steps:
+
+Given more time, I would examine additional features as drivers of home value. Some factors that I would expect to have significant influence could include:
+
+- whether or not a property has a pool or spa
+- whether or not there is a garage on the property
+- the size of the garage
+
+These features could be explored directly, through visualization and statistical testing, or they could be identified through automated features selection techniques such as Recursive Feature Elimination. The goal would be to produce a model that has an error small enough to be useful to someone intending to sell or purchase a single family home.
 
 # INSTRUCTIONS FOR RECREATING PROJECT
 
