@@ -104,10 +104,10 @@ This fuctions is a combination of my explore, evaluate and model
 
 # DELIVER:
 
-- A report in the form of a presentation. (The report/presentation slides should summarize your findings about the drivers of the single unit property values.)
+- A report in the form of a jupter notebook presentation. (The presentation summarizes my findings about the drivers of the single unit property values.)
 
 - A github repository containing my work.
 
 - README file contains project description and goals, data dictionary, project planning, initial ideas/hypotheses, instructions to recreate project.
 
-- Individual modules, .py files, that hold your functions to acquire and prepare your data.
+- Individual modules, .py files, that hold your functions to acquire, prepare and execute66(explore,execute,model) your data.
